@@ -51,7 +51,7 @@ available_tools = {
 
 def stream_text(messages: List[ClientMessage], protocol: str = "data"):
     """
-    Stream text from the OpenAI API.
+    Stream text from the OpenAI API using the provided messages and protocol.
     """
     stream = openai_client.chat.completions.create(
         messages=[{"role": "system", "content": SYSTEM_PROMPT}] + messages,
