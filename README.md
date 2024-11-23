@@ -8,21 +8,45 @@
 git clone https://github.com/chrismaresca/fast-api-base-ai.git
 ```
 
-2. Install the dependencies:
+2. cd into the directory:
+
+```bash
+cd fast-api-base-ai
+``` 
+
+3. Create a new virtual environment:
+
+```bash
+python -m venv .venv --python=3.12
+```
+
+or 
+
+```bash
+virtualenv -p python3.12 venv 
+```
+
+4. Activate the virtual environment:
+
+```bash
+source venv/bin/activate
+```
+
+5. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Clone the `.env.local.sample` file to `.env.local` and populate with your API keys.  
+6. Clone the `.env.local.sample` file to `.env.local` and populate with your API keys.  
 
-4. Run locally with:
+7. Run locally with:
 
 ```bash
 python -m uvicorn src.main:app --reload      
 ```
 
-5. Deploy with:
+8. Deploy with:
 
 ```bash
 serverless deploy --stage production   
